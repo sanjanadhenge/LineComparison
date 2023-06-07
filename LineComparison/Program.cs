@@ -11,6 +11,8 @@ namespace LineComparison
         public static void Main(string[] args)
         {
             Console.WriteLine("Welcome To LineComparison");
+            LineComputation lineComputation = new LineComputation();
+            lineComputation.CalculateLength();
         }
     }
 }
