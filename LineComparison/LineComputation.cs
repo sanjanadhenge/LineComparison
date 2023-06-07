@@ -28,12 +28,24 @@ namespace LineComparison
             Console.WriteLine("Enter y2");
             int d2 = Convert.ToInt32(Console.ReadLine());
             double result2 = Math.Sqrt(Math.Pow((b2 - a2), 2) + Math.Pow((d2 - c2), 2));
-            checkequal(result1, result2);
+            check(result1, result2);
 
         }
-        public void checkequal(double a, double b)
+        public void check(double a, double b)
         {
-            Console.WriteLine(a.Equals(b));
+            double status = a.CompareTo(b);
+            if (status > 0)
+            {
+                Console.WriteLine("{0} is greater than {1}", a, b);
+            }
+            else if (status < 0)
+            {
+                Console.WriteLine("{0} is less than {1}", a, b);
+            }
+            else
+            {
+                Console.WriteLine("{0} is equals {1}", a, b);
+            }
         }
     }
 }
