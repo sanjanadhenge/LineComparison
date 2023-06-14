@@ -33,6 +33,7 @@ namespace LineComparison
         }
         public void check(double a, double b)
         {
+            //UC4-Use CompareTo method
             double status = a.CompareTo(b);
             if (status > 0)
             {
